@@ -1,0 +1,21 @@
+default: &default
+  adapter: mysql2
+  pool: 5
+  timeout: 5000
+  port: 3306
+  encoding: utf8
+  username: foo
+  password: bar
+
+development:
+  <<: *default
+  database: my_dev
+
+test:
+  <<: *default
+  database: my_test
+
+production:
+  <<: *default
+  database: my_production
+  host: the_host
