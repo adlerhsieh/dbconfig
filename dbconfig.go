@@ -1,7 +1,6 @@
 package dbconfig
 
 import (
-	_ "fmt"
 	"gopkg.in/yaml.v2"
 	"io/ioutil"
 	"log"
@@ -27,8 +26,5 @@ func ReadFile(filepath string, env string) map[string]string {
 		log.Fatal(err)
 	}
 
-	// return reflect.TypeOf(m[env])
 	return m[env]
-
-	// return m[env]["username"]
 }
