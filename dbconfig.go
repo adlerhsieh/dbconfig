@@ -6,13 +6,6 @@ import (
 	"log"
 )
 
-type Config struct {
-	Development struct {
-		username string
-		password string
-	}
-}
-
 func ReadFile(filepath string, env string) map[string]string {
 	file, err := ioutil.ReadFile(filepath)
 	if err != nil {
