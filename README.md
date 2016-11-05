@@ -20,7 +20,8 @@ import (
 )
 
 func main() {
-  config := dbconfig.ReadFile("/path/to/database.yml")
+  // Specify filepath & enviroment in parameters
+  config := dbconfig.ReadFile("/path/to/database.yml", "development")
 
   fmt.Println(config["database"])
 }
